@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-4 md:py-6 lg:px-8">
           {/* Hero */}
           <div className="mx-auto text-center">
-            <h1 className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl lg:text-[3.75rem] lg:leading-[1.15] text-balance">
+            <h1 className="text-2xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-[2.75rem] lg:leading-[1.15] text-balance">
               {config.headline}
               {config.headlineAccent && (
                 <span style={{ color: "var(--accent)" }}> {config.headlineAccent}</span>
