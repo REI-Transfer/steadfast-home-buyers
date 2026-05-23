@@ -174,6 +174,11 @@ interface SurveyCardProps {
   phoneHref?: string
   serviceAreas?: ServiceArea[]
   companyName?: string
+  // Additive seed props for the advertorial sticky-bar -> popup flow. When an address is
+  // captured in the sticky bar, the modal SurveyCard opens pre-seeded at step 2 (owner) so
+  // the user does not re-enter the address. These do NOT change submit/webhook/scoring.
+  initialStage1Data?: Partial<Stage1State>
+  initialStage1Step?: number
 }
 
 export function SurveyCard({
@@ -181,15 +186,19 @@ export function SurveyCard({
   phoneHref = "8000000000",
   serviceAreas = [],
   companyName = "Home Buyers",
+  initialStage1Data,
+  initialStage1Step,
 }: SurveyCardProps) {
   // ---- Stage state ----
   const [stage, setStage] = useState<1 | 2>(1)
-  const [stage1Step, setStage1Step] = useState(1) // 1=address, 2=owner, 3=listed, 4=contact
+  const [stage1Step, setStage1Step] = useState(
+    initialStage1Step && initialStage1Step >= 2 && initialStage1Step <= 4 ? initialStage1Step : 1
+  ) // 1=address, 2=owner, 3=listed, 4=contact
   const [stage2Step, setStage2Step] = useState(1) // 1..5 within stage 2
   const totalStage2Steps = 5
 
   // ---- Data state ----
-  const [stage1Data, setStage1Data] = useState<Stage1State>(INITIAL_STAGE1)
+  const [stage1Data, setStage1Data] = useState<Stage1State>({ ...INITIAL_STAGE1, ...(initialStage1Data ?? {}) })
   const [stage2Data, setStage2Data] = useState<Stage2State>(INITIAL_STAGE2)
 
   // ---- Submission state ----

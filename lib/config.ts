@@ -24,6 +24,10 @@ const config = {
   // Service areas — JSON array of {id, centerLat, centerLng, radiusMiles}
   serviceAreas:    process.env.SERVICE_AREAS     ?? "[]",
 
+  // Advertorial — market name drives editorial copy ("West Tennessee"); empty = "the areas we serve"
+  marketName:      process.env.MARKET_NAME       ?? "",
+  smsKeyword:      process.env.SMS_KEYWORD       ?? "OFFER",
+
   // Trust indicators
   stat1Value:      process.env.STAT_1_VALUE      ?? "1,000+",
   stat1Label:      process.env.STAT_1_LABEL      ?? "Homes Purchased",
