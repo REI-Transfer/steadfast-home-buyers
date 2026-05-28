@@ -21,7 +21,7 @@ export default function Hero({ marketName, phoneDisplay, phoneHref, serviceAreas
     <section className="relative w-full overflow-hidden bg-black">
       <div className="absolute inset-0">
         <Image
-          src="/images/adv-home-exterior.jpg"
+          src="/images/v2/v2-hero.jpg"
           alt={`Cash home buyer serving ${marketName}`}
           fill
           className="object-cover opacity-50"

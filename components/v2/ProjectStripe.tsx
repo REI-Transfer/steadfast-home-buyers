@@ -6,7 +6,7 @@ import { openQuiz } from "./openQuiz"
 const ITEMS = [
   { img: "/images/adv-keys-couple.jpg", caption: "Cash Close — Jackson, TN" },
   { img: "/images/adv-handshake.jpg", caption: "As-Is Sale — Memphis, TN" },
-  { img: "/images/adv-couple-window.jpg", caption: "Out-of-State Owner — Murfreesboro, TN" },
+  { img: "/images/v2/v2-murfreesboro.jpg", caption: "Out-of-State Owner — Murfreesboro, TN" },
 ]
 
 export default function ProjectStripe() {

@@ -4,8 +4,8 @@ import Image from "next/image"
 import { openQuiz } from "./openQuiz"
 
 const OPTIONS = [
-  { title: "Inherited a Home", img: "/images/adv-paperwork-alone.jpg" },
-  { title: "Tired Landlord", img: "/images/adv-frustrated-laptop.jpg" },
+  { title: "Inherited a Home", img: "/images/v2/v2-inherited.jpg" },
+  { title: "Tired Landlord", img: "/images/v2/v2-landlord.jpg" },
   { title: "House Needs Repairs", img: "/images/adv-homeowner-repair.jpg" },
   { title: "Job Relocation", img: "/images/adv-empty-rooms.jpg" },
 ]
