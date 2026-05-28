@@ -37,7 +37,7 @@ export default function ProjectStripe() {
               type="button"
               onClick={openQuiz}
               aria-label={`Get my cash offer — ${v.caption}`}
-              className="group rounded-2xl overflow-hidden shadow-md aspect-[9/16] md:aspect-[4/5] relative bg-black text-left hover:shadow-xl transition-all w-full"
+              className="group rounded-2xl overflow-hidden shadow-md aspect-[9/16] relative bg-black text-left hover:shadow-xl transition-all w-full"
               style={{ border: "1px solid var(--hpg-border)" }}
             >
               <Image

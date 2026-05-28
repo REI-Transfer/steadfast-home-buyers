@@ -3,7 +3,7 @@ import SiteHeader from "@/components/v2/SiteHeader"
 import Hero from "@/components/v2/Hero"
 import ServiceOptions from "@/components/v2/ServiceOptions"
 import WhySteadfast from "@/components/v2/WhySteadfast"
-import ProjectStripe from "@/components/v2/ProjectStripe"
+import Reviews from "@/components/v2/Reviews"
 import SiteFooter from "@/components/v2/SiteFooter"
 import StickyTopBar from "@/components/v2/StickyTopBar"
 import { HPG_STYLE_BLOCK } from "@/components/v2/hpg-tokens"
@@ -54,7 +54,7 @@ export default function V2Page() {
         />
         <ServiceOptions />
         <WhySteadfast companyName={config.companyName} />
-        <ProjectStripe />
+        <Reviews />
         <SiteFooter
           companyName={config.companyName}
           phoneDisplay={config.phoneDisplay}
