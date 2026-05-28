@@ -1,28 +1,33 @@
 "use client"
 
+import Image from "next/image"
 import { Star } from "lucide-react"
 import { openQuiz } from "./openQuiz"
 
 // Pulled from steadfasthb.com/reviews — real customer reviews. Edit here when
-// new ones come in. Do not invent reviews.
+// new ones come in. Do not invent reviews. Avatars are AI-generated stand-ins
+// (GPT Image 2) since the source site doesn't ship reviewer photos.
 const REVIEWS = [
   {
     quote:
       "Matt called once a week to check to see if everything was going ok. Matt went above his job to make sure the house sold in a short time. If you want a good real estate agent give Matt a call.",
     name: "Malcolm Jackson",
     city: "Jackson, TN",
+    avatar: "/images/v2/v2-avatar-malcolm.jpg",
   },
   {
     quote:
       "Matt takes the time to understand your needs. He has integrity and a great work ethic. Matt sold our house to the first family he showed it to. Matt did his homework in advance and set up qualified buyers. Thanks for making this process so smooth.",
     name: "Ray Simmons",
     city: "Jackson, TN",
+    avatar: "/images/v2/v2-avatar-ray.jpg",
   },
   {
     quote:
       "Every call or text returned almost instantly. Matt and Field were both very professional, responsive, and knowledgeable of the overall market. You can't go wrong doing business with these guys!",
     name: "Jeremy Andrew",
     city: "Jackson, TN",
+    avatar: "/images/v2/v2-avatar-jeremy.jpg",
   },
 ]
 
@@ -76,15 +81,32 @@ export default function Reviews() {
               >
                 "{r.quote}"
               </p>
-              <p
-                className="font-display font-black text-[13px] uppercase tracking-wide"
-                style={{ color: "var(--hpg-black)" }}
-              >
-                {r.name}
-              </p>
-              <p className="text-[12px] mt-0.5" style={{ color: "var(--hpg-muted)" }}>
-                {r.city}
-              </p>
+              <div className="flex items-center gap-3 mt-1">
+                <div
+                  className="relative h-12 w-12 rounded-full overflow-hidden shrink-0"
+                  style={{ border: "2px solid var(--hpg-gold)" }}
+                >
+                  <Image
+                    src={r.avatar}
+                    alt={r.name}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+                <div>
+                  <p
+                    className="font-display font-black text-[13px] uppercase tracking-wide leading-tight"
+                    style={{ color: "var(--hpg-black)" }}
+                  >
+                    {r.name}
+                  </p>
+                  <p className="text-[12px] leading-tight" style={{ color: "var(--hpg-muted)" }}>
+                    {r.city}
+                  </p>
+                </div>
+              </div>
               <p
                 className="text-[11px] font-bold uppercase tracking-wider mt-3"
                 style={{ color: "var(--hpg-gold-dark)" }}
