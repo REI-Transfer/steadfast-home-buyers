@@ -4,8 +4,8 @@ import Image from "next/image"
 import { openQuiz } from "./openQuiz"
 
 const ITEMS = [
-  { img: "/images/adv-keys-couple.jpg", caption: "Cash Close — Jackson, TN" },
-  { img: "/images/adv-handshake.jpg", caption: "As-Is Sale — Memphis, TN" },
+  { img: "/images/v2/v2-jackson.jpg", caption: "Cash Close — Jackson, TN" },
+  { img: "/images/v2/v2-memphis.jpg", caption: "As-Is Sale — Memphis, TN" },
   { img: "/images/v2/v2-murfreesboro.jpg", caption: "Out-of-State Owner — Murfreesboro, TN" },
 ]
 
