@@ -7,7 +7,7 @@ const OPTIONS = [
   { title: "Inherited a Home", img: "/images/v2/v2-inherited.jpg" },
   { title: "Tired Landlord", img: "/images/v2/v2-landlord.jpg" },
   { title: "House Needs Repairs", img: "/images/v2/v2-repairs.jpg" },
-  { title: "Job Relocation", img: "/images/v2/v2-relocation.jpg" },
+  { title: "Assisted Living Move", img: "/images/adv-senior-cautious.jpg" },
 ]
 
 export default function ServiceOptions() {
