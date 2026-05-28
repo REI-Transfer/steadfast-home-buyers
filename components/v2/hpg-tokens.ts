@@ -34,10 +34,15 @@ export const HPG_STYLE_BLOCK = `
   --hpg-cta: ${HPG.cta};
   --hpg-cta-dark: ${HPG.ctaDark};
 }
+[data-hpg-page] {
+  font-family: var(--font-hpg-sans, "Inter", system-ui, sans-serif);
+  font-size: 17px;
+  line-height: 1.55;
+}
 [data-hpg-page] .hpg-container { max-width: 1100px; margin: 0 auto; width: 100%; }
-[data-hpg-page] .font-display { font-family: "Figtree", "Plus Jakarta Sans", system-ui, sans-serif; letter-spacing: -0.01em; }
+[data-hpg-page] .font-display,
 [data-hpg-page] h1, [data-hpg-page] h2, [data-hpg-page] h3, [data-hpg-page] h4, [data-hpg-page] h5 {
-  font-family: "Figtree", "Plus Jakarta Sans", system-ui, sans-serif;
+  font-family: var(--font-hpg-display, "Figtree", "Inter", system-ui, sans-serif);
   letter-spacing: -0.01em;
 }
 @keyframes hpg-pulse {
