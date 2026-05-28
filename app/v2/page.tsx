@@ -1,4 +1,11 @@
-import HomebuyerLanding from "@/components/v2/HomebuyerLanding"
+import SiteHeader from "@/components/v2/SiteHeader"
+import Hero from "@/components/v2/Hero"
+import ServiceOptions from "@/components/v2/ServiceOptions"
+import WhySteadfast from "@/components/v2/WhySteadfast"
+import ProjectStripe from "@/components/v2/ProjectStripe"
+import SiteFooter from "@/components/v2/SiteFooter"
+import StickyTopBar from "@/components/v2/StickyTopBar"
+import { HPG_STYLE_BLOCK } from "@/components/v2/hpg-tokens"
 import config from "@/lib/config"
 
 export default function V2Page() {
@@ -7,16 +14,35 @@ export default function V2Page() {
     parsedServiceAreas = JSON.parse(config.serviceAreas)
   } catch {}
 
-  const supportEmail = process.env.SUPPORT_EMAIL || "matt@steadfasthomebuyers.com"
+  const marketName = config.marketName || "West Tennessee"
 
   return (
-    <HomebuyerLanding
-      companyName={config.companyName}
-      phoneDisplay={config.phoneDisplay}
-      phoneHref={config.phoneHref}
-      marketName={config.marketName || "West Tennessee"}
-      supportEmail={supportEmail}
-      serviceAreas={parsedServiceAreas}
-    />
+    <>
+      <style dangerouslySetInnerHTML={{ __html: HPG_STYLE_BLOCK }} />
+      <main data-hpg-page style={{ backgroundColor: "var(--hpg-cream)" }}>
+        <StickyTopBar phoneDisplay={config.phoneDisplay} phoneHref={config.phoneHref} />
+        <SiteHeader
+          companyName={config.companyName}
+          phoneDisplay={config.phoneDisplay}
+          phoneHref={config.phoneHref}
+          logoUrl={config.logoUrl}
+        />
+        <Hero
+          marketName={marketName}
+          phoneDisplay={config.phoneDisplay}
+          phoneHref={config.phoneHref}
+          serviceAreas={parsedServiceAreas}
+        />
+        <ServiceOptions />
+        <WhySteadfast companyName={config.companyName} />
+        <ProjectStripe />
+        <SiteFooter
+          companyName={config.companyName}
+          phoneDisplay={config.phoneDisplay}
+          phoneHref={config.phoneHref}
+          marketName={marketName}
+        />
+      </main>
+    </>
   )
 }

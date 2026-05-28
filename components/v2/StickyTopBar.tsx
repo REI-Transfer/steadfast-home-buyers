@@ -1,45 +1,57 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
 
 interface StickyTopBarProps {
-  companyName: string
+  phoneDisplay: string
+  phoneHref: string
 }
 
-export default function StickyTopBar({ companyName }: StickyTopBarProps) {
+export default function StickyTopBar({ phoneDisplay, phoneHref }: StickyTopBarProps) {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShow(window.scrollY > window.innerHeight)
+    const onScroll = () => {
+      setShow(window.scrollY > window.innerHeight * 0.6)
     }
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const scrollToForm = () => {
-    document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })
+  const jumpToQuiz = () => {
+    document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 bg-[#6B8F71] p-3 md:p-4 z-50 shadow-lg transition-transform duration-300 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 shadow-2xl px-4 py-3 transition-transform duration-300 ease-out ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
+      style={{
+        backgroundColor: "white",
+        borderBottom: "4px solid var(--hpg-gold)",
+      }}
       aria-hidden={!show}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-        <span className="font-sans text-white font-medium text-sm md:text-base truncate">
-          {companyName} · Free Cash Offer
-        </span>
-        <Button
-          onClick={scrollToForm}
-          className="bg-white text-[#6B8F71] hover:bg-white/90 font-sans font-medium px-5 md:px-6 whitespace-nowrap"
+      <div className="hpg-container flex items-center justify-between gap-3">
+        <a
+          href={`tel:${phoneHref}`}
+          className="hidden sm:inline-flex items-center gap-2 font-display font-black text-[14px] tracking-wide"
+          style={{ color: "var(--hpg-black)" }}
+          aria-label={`Call ${phoneDisplay}`}
         >
-          Get My Offer
-        </Button>
+          <span aria-hidden>📞</span>
+          {phoneDisplay}
+        </a>
+        <button
+          onClick={jumpToQuiz}
+          className="ml-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-full text-white font-display font-black text-[14px] sm:text-[15px] uppercase tracking-wide shadow-lg hpg-pulse-cta"
+          style={{ backgroundColor: "var(--hpg-cta)" }}
+        >
+          <span>Get My Cash Offer</span>
+          <span className="text-sm opacity-80" aria-hidden>→</span>
+        </button>
       </div>
     </div>
   )
