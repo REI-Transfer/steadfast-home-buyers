@@ -5,7 +5,7 @@ import config from "@/lib/config"
 export const metadata = {
   title: "Should You Fix Up Your House Before You Sell It? The Math Most Homeowners Get Wrong | Steadfast Home Buyers",
   description:
-    "Before you spend a dollar on repairs, here is the honest math on what fixing up your West Tennessee home actually returns, and why it often costs you more.",
+    "Before you spend a dollar on repairs, here is the honest math on what fixing up your Jackson, TN home actually returns, and why it often costs you more.",
 }
 
 export default function Page() {
@@ -38,7 +38,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-homeowner-repair.jpg"
-        alt="A West Tennessee homeowner in the middle of repairs, weighing whether the work is worth it"
+        alt="A Jackson, TN homeowner in the middle of repairs, weighing whether the work is worth it"
         caption="Before that first coat of paint goes on, it pays to know what the work will really put back in your pocket."
       />
 
@@ -152,7 +152,7 @@ export default function Page() {
         </li>
         <li>
           Three. Estimate the value bump honestly, and assume it is less than you spend. Look at what a
-          fixed up version would truly sell for in your part of West Tennessee, then accept that you
+          fixed up version would truly sell for in your part of Jackson, TN, then accept that you
           will likely recover only part of what you put in. Twenty in, twelve back is a fair planning
           rule.
         </li>

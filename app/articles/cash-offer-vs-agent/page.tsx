@@ -5,7 +5,7 @@ import config from "@/lib/config"
 export const metadata = {
   title: "Cash Offer Or List With An Agent? An Honest Look At What You Actually Walk Away With | Steadfast Home Buyers",
   description:
-    "A fair, plain-English comparison from Steadfast Home Buyers of listing with an agent versus selling for cash, so a West Tennessee homeowner can pick the route that fits.",
+    "A fair, plain-English comparison from Steadfast Home Buyers of listing with an agent versus selling for cash, so a Jackson, TN homeowner can pick the route that fits.",
 }
 
 export default function Page() {

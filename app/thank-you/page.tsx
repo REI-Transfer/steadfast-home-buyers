@@ -69,7 +69,7 @@ export default function ThankYouPage() {
               for everybody, and it should not have to.
             </p>
             <p>
-              I started {config.companyName} here in West Tennessee with my wife Ashton after we kept meeting good
+              I started {config.companyName} here in Jackson, TN with my wife Ashton after we kept meeting good
               people stuck in hard spots. A house inherited that they could not afford to keep. A place that needed more
               work than they had time or money for. A divorce, a move, a tired rental. I spent eight years in the Marine
               Corps, and I run this company the same way I was trained to do the job. Straight, honest, and done right.
@@ -87,7 +87,7 @@ export default function ThankYouPage() {
         <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
           <h3 className="text-lg font-bold text-gray-900 mb-1">While You Wait, a Few Honest Reads</h3>
           <p className="text-sm text-gray-500 mb-5">
-            Straight talk on the questions almost every West Tennessee homeowner asks before they sell.
+            Straight talk on the questions almost every Jackson, TN homeowner asks before they sell.
           </p>
           <div className="grid grid-cols-1 gap-3">
             {RECOMMENDED_READS.map((a) => (

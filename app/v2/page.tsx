@@ -29,7 +29,7 @@ export default function V2Page() {
     parsedServiceAreas = JSON.parse(config.serviceAreas)
   } catch {}
 
-  const marketName = config.marketName || "West Tennessee"
+  const marketName = config.marketName || "Jackson, TN"
 
   return (
     <>

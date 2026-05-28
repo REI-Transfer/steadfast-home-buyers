@@ -150,7 +150,7 @@ export default function Page() {
       <P>
         Which means the only real variable left is who you choose to deal with. The model is the same
         everywhere. The people running it are not. We are a family-run, veteran-owned outfit right here
-        at home, and every dollar we put to work stays in West Tennessee. Pick a buyer who names the
+        at home, and every dollar we put to work stays in Jackson, TN. Pick a buyer who names the
         trade out loud, honors the number it gives you, and never asks you for a dime. Do that, and the
         catch stops being a trap. It becomes a choice you made on purpose, with your eyes wide open.
         That is the entire point of reading this far.

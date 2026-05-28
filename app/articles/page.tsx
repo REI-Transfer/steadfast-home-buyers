@@ -4,7 +4,7 @@ import config from "@/lib/config"
 import { ARTICLES } from "@/lib/articles"
 
 export const metadata = {
-  title: "Articles for West Tennessee Homeowners | Steadfast Home Buyers",
+  title: "Articles for Jackson, TN Homeowners | Steadfast Home Buyers",
   description:
     "Honest, plain-English articles for homeowners thinking about selling. What happens after you ask for an offer, the truth about lowball offers, how to vet a buyer, and cash versus listing.",
 }

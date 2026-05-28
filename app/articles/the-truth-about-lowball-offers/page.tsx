@@ -5,7 +5,7 @@ import config from "@/lib/config"
 export const metadata = {
   title: "The Truth About 'Lowball' Cash Offers, From A Local Buyer Who Actually Makes Them | Steadfast Home Buyers",
   description:
-    "Afraid a cash offer means a lowball? Steadfast Home Buyers opens the hood on how a fair West Tennessee cash offer is really built, and why the number you keep is what counts.",
+    "Afraid a cash offer means a lowball? Steadfast Home Buyers opens the hood on how a fair Jackson, TN cash offer is really built, and why the number you keep is what counts.",
 }
 
 export default function Page() {
@@ -35,7 +35,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-handshake.jpg"
-        alt="A handshake on a fair cash offer in West Tennessee"
+        alt="A handshake on a fair cash offer in Jackson, TN"
         caption="A real offer is a trade you can see laid out, not a number you have to guess at."
       />
 

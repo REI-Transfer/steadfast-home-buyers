@@ -3,15 +3,15 @@ import { ContactCTA } from "@/components/article/contact-cta"
 import config from "@/lib/config"
 
 export const metadata = {
-  title: "Is Now A Bad Time To Sell In West Tennessee? Why Waiting For A Better Market Can Quietly Cost You | Steadfast Home Buyers",
+  title: "Is Now A Bad Time To Sell In Jackson, TN? Why Waiting For A Better Market Can Quietly Cost You | Steadfast Home Buyers",
   description:
-    "Waiting for a better market feels smart, but the holding costs never stop. Here is how to weigh the wait against a real cash offer today in West Tennessee.",
+    "Waiting for a better market feels smart, but the holding costs never stop. Here is how to weigh the wait against a real cash offer today in Jackson, TN.",
 }
 
 export default function Page() {
   return (
     <ArticleShell
-      title="Is Now A Bad Time To Sell In West Tennessee? Why Waiting For A Better Market Can Quietly Cost You"
+      title="Is Now A Bad Time To Sell In Jackson, TN? Why Waiting For A Better Market Can Quietly Cost You"
       dek="Holding out for a higher price feels like the patient, smart move. But the waiting itself carries a price tag most homeowners never add up."
       companyName={config.companyName}
     >
@@ -36,7 +36,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-couple-window.jpg"
-        alt="An older West Tennessee couple weighing whether to wait to sell"
+        alt="An older Jackson, TN couple weighing whether to wait to sell"
         caption="Waiting feels like keeping your options open. The clock has its own opinion."
       />
 
@@ -109,7 +109,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-home-exterior.jpg"
-        alt="An older West Tennessee home as another season passes"
+        alt="An older Jackson, TN home as another season passes"
         caption="Every season that passes is one more season the house quietly ages on you."
       />
 
@@ -178,7 +178,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/hero-older-couple-porch.jpg"
-        alt="A West Tennessee couple ready for their next chapter"
+        alt="A Jackson, TN couple ready for their next chapter"
         caption="For a lot of folks, being done and moving forward is worth more than a maybe later."
       />
 

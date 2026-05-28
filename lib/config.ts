@@ -22,10 +22,14 @@ const config = {
   subheadline:     process.env.SUBHEADLINE       ?? "No fees. No repairs. Cash offer in 24 hours.",
 
   // Service areas — JSON array of {id, centerLat, centerLng, radiusMiles}
-  serviceAreas:    process.env.SERVICE_AREAS     ?? "[]",
+  // Steadfast's actual service area: 70-mile radius centered on Jackson, TN
+  // (where Matt's team operates from). Covers Jackson + Lexington + Henderson
+  // + Milan + Brownsville + Humboldt + Dyersburg + east Memphis suburbs.
+  serviceAreas:    process.env.SERVICE_AREAS     ?? '[{"id":"jackson-tn","centerLat":35.6145,"centerLng":-88.8139,"radiusMiles":70}]',
 
-  // Advertorial — market name drives editorial copy ("West Tennessee"); empty = "the areas we serve"
-  marketName:      process.env.MARKET_NAME       ?? "",
+  // Advertorial — market name drives editorial copy. Default reflects Steadfast's
+  // actual local market (Jackson, TN) per William directive 2026-05-28.
+  marketName:      process.env.MARKET_NAME       ?? "Jackson, TN",
   smsKeyword:      process.env.SMS_KEYWORD       ?? "OFFER",
 
   // Trust indicators

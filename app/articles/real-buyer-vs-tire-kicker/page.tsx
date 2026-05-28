@@ -5,7 +5,7 @@ import config from "@/lib/config"
 export const metadata = {
   title: "How To Tell A Real Local Home Buyer From A Tire-Kicker In About Five Minutes | Steadfast Home Buyers",
   description:
-    "A simple 5-minute checklist to vet any cash home buyer in West Tennessee before you share details or sign a thing, from Steadfast Home Buyers.",
+    "A simple 5-minute checklist to vet any cash home buyer in Jackson, TN before you share details or sign a thing, from Steadfast Home Buyers.",
 }
 
 export default function Page() {
@@ -39,7 +39,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-local-team.jpg"
-        alt="A real local West Tennessee home-buying team"
+        alt="A real local Jackson, TN home-buying team"
         caption="A real local buyer has a name, a face, and a team you can actually reach. Tire-kickers tend to stay anonymous."
       />
 

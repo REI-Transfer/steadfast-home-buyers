@@ -4,7 +4,7 @@ import config from "@/lib/config"
 
 export const metadata = {
   title: "How To Tell A Real Cash Buyer From A Scam: Five Questions That Expose The Difference | Steadfast Home Buyers",
-  description: "Most cash home buyers in West Tennessee are legitimate. Here are five plain questions that quickly expose a bad actor before you share anything personal.",
+  description: "Most cash home buyers in Jackson, TN are legitimate. Here are five plain questions that quickly expose a bad actor before you share anything personal.",
 }
 
 export default function Page() {
@@ -47,7 +47,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-phone-vetting.jpg"
-        alt="A West Tennessee homeowner carefully vetting a buyer on the phone"
+        alt="A Jackson, TN homeowner carefully vetting a buyer on the phone"
         caption="You do not need to be an expert. You just need to ask plain questions and listen to how someone answers them."
       />
 
@@ -96,7 +96,7 @@ export default function Page() {
       <P>
         The good sign is that they hand all this over without blinking. They expect you to look them
         up. They might even point you to where to find it. We are a local, family run, veteran owned
-        business right here in West Tennessee, and we would rather you check us out than wonder. A real
+        business right here in Jackson, TN, and we would rather you check us out than wonder. A real
         buyer wants you to feel safe, because a nervous seller is one who walks away.
       </P>
 

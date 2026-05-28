@@ -3,16 +3,16 @@ import { ContactCTA } from "@/components/article/contact-cta"
 import config from "@/lib/config"
 
 export const metadata = {
-  title: "What Really Happens After You Ask Steadfast For A Cash Offer (Most West Tennessee Homeowners Are Surprised) | Steadfast Home Buyers",
+  title: "What Really Happens After You Ask Steadfast For A Cash Offer (Most Jackson, TN Homeowners Are Surprised) | Steadfast Home Buyers",
   description:
-    "A plain walk-through of every step after you ask Steadfast Home Buyers for a cash offer, so a West Tennessee homeowner knows exactly what to expect.",
+    "A plain walk-through of every step after you ask Steadfast Home Buyers for a cash offer, so a Jackson, TN homeowner knows exactly what to expect.",
 }
 
 export default function Page() {
   const area = config.marketName || "the areas we serve"
   return (
     <ArticleShell
-      title="What Really Happens After You Ask Steadfast For A Cash Offer (Most West Tennessee Homeowners Are Surprised)"
+      title="What Really Happens After You Ask Steadfast For A Cash Offer (Most Jackson, TN Homeowners Are Surprised)"
       dek="A calm, step-by-step walk-through of the whole thing, so there are no surprises and nothing to dread."
       companyName={config.companyName}
     >
@@ -41,7 +41,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-keys-couple.jpg"
-        alt="An older West Tennessee couple holding the keys after a smooth cash sale"
+        alt="An older Jackson, TN couple holding the keys after a smooth cash sale"
         caption="A local couple on closing day. They named the date, packed at their own speed, and walked away paid."
       />
 
@@ -164,7 +164,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-handshake.jpg"
-        alt="A handshake on a fair cash offer in West Tennessee"
+        alt="A handshake on a fair cash offer in Jackson, TN"
         caption="The whole thing comes down to a fair number and a date you picked. No drama, no chasing."
       />
 

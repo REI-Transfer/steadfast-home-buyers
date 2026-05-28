@@ -5,7 +5,7 @@ import config from "@/lib/config"
 export const metadata = {
   title: "Why Not Just Sell It Yourself And Skip The Middleman? The Hidden Cost Of Going It Alone | Steadfast Home Buyers",
   description:
-    "Selling your West Tennessee house yourself to skip the middleman sounds smart. Here is the honest truth about what for-sale-by-owner really costs you.",
+    "Selling your Jackson, TN house yourself to skip the middleman sounds smart. Here is the honest truth about what for-sale-by-owner really costs you.",
 }
 
 export default function Page() {
@@ -36,7 +36,7 @@ export default function Page() {
 
       <ArticleImage
         src="/images/adv-paperwork-alone.jpg"
-        alt="A West Tennessee homeowner buried in the paperwork of selling alone"
+        alt="A Jackson, TN homeowner buried in the paperwork of selling alone"
         caption="The day the sign goes in the yard, you become the agent, the marketer, the negotiator, and the closer all at once."
       />
 
