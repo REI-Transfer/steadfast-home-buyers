@@ -1,8 +1,8 @@
-import Image from "next/image"
+"use client"
 
-// HPG's VideoStripe shows 3 portrait videos. Steadfast doesn't have videos
-// yet, so this is the same visual rhythm with portrait images from the
-// existing adv-* library. Easy to swap to <video> later.
+import Image from "next/image"
+import { openQuiz } from "./openQuiz"
+
 const ITEMS = [
   { img: "/images/adv-keys-couple.jpg", caption: "Cash Close — Jackson, TN" },
   { img: "/images/adv-handshake.jpg", caption: "As-Is Sale — Memphis, TN" },
@@ -32,16 +32,19 @@ export default function ProjectStripe() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {ITEMS.map((v) => (
-            <div
+            <button
               key={v.img}
-              className="rounded-2xl overflow-hidden shadow-md aspect-[9/16] md:aspect-[4/5] relative bg-black"
+              type="button"
+              onClick={openQuiz}
+              aria-label={`Get my cash offer — ${v.caption}`}
+              className="group rounded-2xl overflow-hidden shadow-md aspect-[9/16] md:aspect-[4/5] relative bg-black text-left hover:shadow-xl transition-all w-full"
               style={{ border: "1px solid var(--hpg-border)" }}
             >
               <Image
                 src={v.img}
                 alt={v.caption}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(min-width: 768px) 33vw, 100vw"
                 unoptimized
               />
@@ -49,8 +52,14 @@ export default function ProjectStripe() {
                 <p className="text-white font-display font-black text-[13px] uppercase tracking-wide">
                   {v.caption}
                 </p>
+                <p
+                  className="text-[11px] font-bold uppercase tracking-wider mt-1"
+                  style={{ color: "var(--hpg-gold)" }}
+                >
+                  Get my cash offer →
+                </p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

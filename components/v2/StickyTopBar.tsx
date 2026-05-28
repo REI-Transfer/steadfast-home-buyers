@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { openQuiz } from "./openQuiz"
 
 interface StickyTopBarProps {
   phoneDisplay: string
@@ -18,10 +19,6 @@ export default function StickyTopBar({ phoneDisplay, phoneHref }: StickyTopBarPr
     onScroll()
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
-
-  const jumpToQuiz = () => {
-    document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth", block: "start" })
-  }
 
   return (
     <div
@@ -45,7 +42,7 @@ export default function StickyTopBar({ phoneDisplay, phoneHref }: StickyTopBarPr
           {phoneDisplay}
         </a>
         <button
-          onClick={jumpToQuiz}
+          onClick={openQuiz}
           className="ml-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-full text-white font-display font-black text-[14px] sm:text-[15px] uppercase tracking-wide shadow-lg hpg-pulse-cta"
           style={{ backgroundColor: "var(--hpg-cta)" }}
         >

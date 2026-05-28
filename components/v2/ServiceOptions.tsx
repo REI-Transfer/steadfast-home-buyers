@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { openQuiz } from "./openQuiz"
 
 const OPTIONS = [
   { title: "Inherited a Home", img: "/images/adv-paperwork-alone.jpg" },
@@ -30,10 +33,12 @@ export default function ServiceOptions() {
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {OPTIONS.map((o) => (
-            <a
+            <button
               key={o.title}
-              href="#quiz"
-              className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+              type="button"
+              onClick={openQuiz}
+              aria-label={`Get my cash offer — ${o.title}`}
+              className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all text-left w-full"
               style={{ border: "1px solid var(--hpg-border)" }}
             >
               <Image
@@ -53,10 +58,10 @@ export default function ServiceOptions() {
                   className="text-[11px] font-bold uppercase tracking-wider mt-1"
                   style={{ color: "var(--hpg-gold)" }}
                 >
-                  Get my offer →
+                  Get my cash offer →
                 </p>
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </div>

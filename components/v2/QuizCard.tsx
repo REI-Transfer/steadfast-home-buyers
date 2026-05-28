@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CountdownTimer from "./CountdownTimer"
 import { SurveyCard } from "@/components/survey/survey-card"
+import { START_QUIZ_EVENT } from "./openQuiz"
 
 const MONTH_NAMES = [
   "January", "February", "March", "April", "May", "June",
@@ -19,6 +20,12 @@ interface QuizCardProps {
 export default function QuizCard({ marketName, phoneDisplay, phoneHref, serviceAreas }: QuizCardProps) {
   const [started, setStarted] = useState(false)
   const month = MONTH_NAMES[new Date().getMonth()]
+
+  useEffect(() => {
+    const handler = () => setStarted(true)
+    window.addEventListener(START_QUIZ_EVENT, handler)
+    return () => window.removeEventListener(START_QUIZ_EVENT, handler)
+  }, [])
 
   if (started) {
     return (
