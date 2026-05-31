@@ -22,9 +22,8 @@ export default function QuizCard({ marketName, phoneDisplay, phoneHref, serviceA
 
   // No intro/gate: SurveyCard mounts immediately so the address field is the
   // first thing the user sees (William directive 2026-05-31, after Steadfast hit
-  // 91 LPV with 0 leads — the offer-card gate was killing conversion).
-  // openQuiz() still works: handler just scrolls into view since the form is
-  // already mounted.
+  // 91 LPV with 0 leads). Timer lives BELOW the address field per second William
+  // directive — top banner stays text-only for context.
   useEffect(() => {
     const handler = () => {
       requestAnimationFrame(() => {
@@ -41,8 +40,7 @@ export default function QuizCard({ marketName, phoneDisplay, phoneHref, serviceA
       className="rounded-2xl shadow-2xl overflow-hidden hpg-fadein"
       style={{ backgroundColor: "white", border: "1px solid var(--hpg-border)" }}
     >
-      {/* Urgency banner — top. Keeps the month-window framing + countdown
-          without gating the form behind a click. */}
+      {/* Urgency banner — text only, no timer */}
       <div
         className="text-white text-center py-2 sm:py-3 px-4"
         style={{
@@ -53,12 +51,6 @@ export default function QuizCard({ marketName, phoneDisplay, phoneHref, serviceA
         <p className="font-display font-black text-[13px] sm:text-[15px] uppercase tracking-wide">
           {month} Cash Offer Window for {marketName} <span aria-hidden>🏠</span>
         </p>
-        <div className="mt-1 flex justify-center sm:hidden">
-          <CountdownTimer size="sm" />
-        </div>
-        <div className="mt-1 hidden sm:flex justify-center">
-          <CountdownTimer size="lg" />
-        </div>
       </div>
 
       {/* SurveyCard mounted directly. Step 1.1 = "Enter your address to get started" */}
@@ -67,6 +59,29 @@ export default function QuizCard({ marketName, phoneDisplay, phoneHref, serviceA
         phoneHref={phoneHref}
         serviceAreas={serviceAreas}
       />
+
+      {/* Countdown BELOW the address fill, on a soft cream stripe. Stays visible
+          through every form step as a steady urgency cue. */}
+      <div
+        className="text-center py-3 sm:py-4 px-4 border-t"
+        style={{
+          backgroundColor: "var(--hpg-cream)",
+          borderTopColor: "var(--hpg-border)",
+        }}
+      >
+        <p
+          className="text-[10px] sm:text-[12px] font-bold uppercase tracking-wider mb-2"
+          style={{ color: "var(--hpg-muted)" }}
+        >
+          Offer Expires In:
+        </p>
+        <div className="flex justify-center sm:hidden">
+          <CountdownTimer size="sm" />
+        </div>
+        <div className="hidden sm:flex justify-center">
+          <CountdownTimer size="lg" />
+        </div>
+      </div>
     </div>
   )
 }
