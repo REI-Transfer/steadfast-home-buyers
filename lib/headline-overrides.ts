@@ -80,19 +80,38 @@ export const HEADLINE_OVERRIDES: HeadlineOverride[] = [
   // ====================================================================
 
   // ====================================================================
-  // Tap-Range family (Template C) — add when C-coded ads ship
+  // Tap-Range family (Template C) — interactive year-built / years-owned
+  // qualifiers. Pulls long-built, long-owned Jackson TN homes into cash close.
   // ====================================================================
 
-  // C1 — TBD when concept is finalized
-  // C2 — TBD when concept is finalized
+  // C1 — YearBuilt (Pre-2014 TN homes qualifier)
+  {
+    match: /^C1-YearBuilt-/i,
+    h1: "Pre-2014 Jackson TN Home? See What It's Actually Worth.",
+    sub: "Long-built West TN homes are sitting on record equity. 14-day cash close, no repairs.",
+  },
+
+  // C2 — YearsOwned (long-term ownership qualifier)
+  {
+    match: /^C2-YearsOwned-/i,
+    h1: "Owned Your Jackson TN Home 10+ Years? See Your Number Today.",
+    sub: "Long-term West Tennessee owners are sitting on the strongest equity in years. As-is, 14-day cash close.",
+  },
+
   // C3 — TBD when concept is finalized
 
   // ====================================================================
-  // Poll Card family (Template D) — add when D-coded ads ship
+  // Poll Card family (Template D) — Yes/No commitment, listing vs cash
   // ====================================================================
 
   // D1 — TBD when concept is finalized
-  // D2 — TBD when concept is finalized
+
+  // D2 — AgentVsCash (60-day listing vs 14-day cash poll)
+  {
+    match: /^D2-AgentVsCash-/i,
+    h1: "Would You Rather Wait 60 Days Or Get Cash In 14?",
+    sub: "Most Jackson TN owners 45+ are skipping the listing. Same price at closing, no commissions.",
+  },
 ]
 
 /**
